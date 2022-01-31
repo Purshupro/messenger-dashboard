@@ -1,0 +1,76 @@
+<header>
+  <app-navbar></app-navbar>
+</header>
+<main>
+  <aside class="sidebar">
+    <div class="sidebar-container">
+      <div class="sidebar-avatar">
+        <img src="./assets/images/girl.jpg" alt="avatar" class="avatar">
+        <div>
+          <h3 class="title">Robin Wang</h3>
+          <p class="sub-title">Life starts at the end of your comfort zone</p>
+        </div>
+      </div>
+      <div class="menu">
+        <div class="menu-section">
+          <div class="menu-section-main active"> <img src="../../assets/images/icons8-topic-48 (1).png" alt=""><span>Messages</span></div>
+          <div class="menu-section-child"><button>Chats</button></div>
+          <div class="menu-section-child"><button>Send Message</button></div>
+        </div>
+        <div class="menu-section">
+          <div class="menu-section-main"> <img src="../../assets/images/icons8-topic-48 (1).png" alt=""><span>Groups</span></div>
+          <div class="menu-section-child"><button>History</button></div>
+          <div class="menu-section-child"><button>Create Groups</button></div>
+        </div>
+        <div class="menu-section">
+          <div class="menu-section-main"> <img src="../../assets/images/icons8-topic-48 (1).png" alt=""><span>Video Calls</span></div>
+          <div class="menu-section-child"><button>History</button></div>
+          <div class="menu-section-child"><button>Calls</button></div>
+        </div>
+      </div>
+    </div>
+  </aside>
+  <section class="messengerBody">
+    <div class="messengerBodytitle d-flex align-items-center">
+      <img src="./assets/images/icons8-topic-48 (1).png" alt="Messages">
+      <h2>Messages</h2>
+    </div>
+    <div class="chatBox">
+      <div class="chatBox-users">
+          <div class="left-title">
+              <h4>Chats</h4>
+          </div>
+        <ul class="chatBox-users-list">
+          <li *ngFor="let item of [1,2,3,4]; let i=index">
+            <div class="user-card" [ngClass]="{'user-card-active': i===0}">
+              <div class="card-content">
+                <img src="./assets/images/girl.jpg" alt="avatar" class="avatar">
+                <div class="avatarInfo">
+                  <h4>Olivia Sol</h4>
+                  <h6>Hey Robin this seems a great start</h6>
+                </div>
+              </div>
+              <div class="card-footer">
+                  <div>
+                      <span class="note">19 Jan 2018 | 03:49 pm</span>
+                  </div>
+                  <div>
+                      <span class="note">20 Replies | 290/300</span>
+                  </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="chatBox-messageBody">
+        <div class="message-navbar">
+            <ul class="items">
+                <li>REPLIES</li>
+                <li>REPORTS</li>
+            </ul>
+        </div>
+        <div class="message-body"></div>
+      </div>
+    </div>
+  </section>
+</main>

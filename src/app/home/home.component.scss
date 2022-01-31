@@ -1,0 +1,225 @@
+$primary: #e8887e;
+$text-black: #0a0a0a;
+$text-grey: #adaeae;
+$custom-shadow: 0px 0px 25px #ddddddb8;
+
+main {
+  background-color: #f8f8f8;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  padding: 40px;
+
+  .sidebar {
+    flex-basis: auto;
+
+    .sidebar-container {
+      max-width: 80%;
+      margin: 0 auto;
+      text-align: center;
+
+      .sidebar-avatar {
+        margin-bottom: 40px;
+
+        .avatar {
+          border-radius: 50%;
+          width: 100px;
+        }
+
+        .title {
+          font-size: 16px;
+          color: $text-black;
+          margin: 10px 0;
+          letter-spacing: 1px;
+        }
+
+        .sub-title {
+          color: $text-grey;
+          font-size: 12px;
+        }
+      }
+
+      .menu {
+        .menu-section {
+          margin-bottom: 10px;
+
+          .menu-section-main {
+            img {
+              max-width: 20px;
+              display: inline-block;
+              margin-right: 10px;
+            }
+
+            background-color: white;
+            box-shadow: $custom-shadow;
+            border-radius: 3px;
+            height: 32px;
+            width: 150px;
+            margin: 0 auto 16px auto;
+            display: flex;
+            align-items: center;
+            padding-left: 25px;
+            color: $text-black;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 12px;
+            letter-spacing: 1px;
+          }
+
+          .menu-section-child {
+            text-align: left;
+            margin-bottom: 10px;
+
+            button {
+              background: none;
+              color: inherit;
+              font-size: 12px;
+              border: none;
+              padding: 0;
+              cursor: pointer;
+              outline: inherit;
+              margin-left: 70px;
+            }
+          }
+
+          .active {
+            background-color: $primary;
+            color: white;
+
+            img {
+              filter: brightness(2);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .messengerBody {
+    flex-grow: 1;
+    flex-basis: auto;
+
+    .messengerBodytitle {
+      margin-bottom: 24px;
+
+      img {
+        width: 28px;
+      }
+
+      h2 {
+        margin-left: 10px;
+        font-weight: 500;
+      }
+    }
+
+    .chatBox {
+      background-color: #ffffff;
+      border-radius: 12px;
+      box-shadow: $custom-shadow;
+      display: flex;
+
+      .chatBox-users {
+        flex-basis: 20%;
+        border-right: 1px solid #ddddddb8;
+
+        .left-title {
+          display: flex;
+          align-items: center;
+          height: 50px;
+          padding: 0 20px;
+        }
+
+        .chatBox-users-list {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+
+          li {
+
+            .user-card {
+              border-top: 1px solid #e3e3e3;
+              padding: 0 16px 5px 16px;
+
+              .card-content {
+                display: flex;
+                align-items: center;
+                padding: 16px;
+
+                .avatar {
+                  width: 48px;
+                  height: 48px;
+                  border-radius: 50%;
+                }
+
+                .avatarInfo {
+                  margin-left: 16px;
+
+                  h4 {
+                    margin: 0 0 5px 0;
+                    padding: 0;
+                    font-size: 14px;
+                    color: #555656;
+                  }
+
+                  h6 {
+                    color: #5b5b5b;
+                    font-size: 10px;
+                    // color: #898787;
+                  }
+                }
+              }
+
+              .card-footer {
+                display: flex;
+                justify-content: space-between;
+
+                div {
+                  .note {
+                    color: $text-black;
+                    opacity: 0.9;
+                    font-size: 10px;
+                  }
+                }
+
+              }
+            }
+
+            .user-card-active {
+              background: #fdf6f5;
+
+              .card-content {
+                .avatarInfo {
+                  h4 {
+                    color: $primary;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .chatBox-messageBody {
+        width: 100%;
+        .message-navbar {
+          width: 100%;
+          border-bottom: 1px solid #ddddddb8;
+          display: flex;
+          align-items: center;
+          height: 51px;
+          padding: 0 20px;
+
+          .items {
+            display: flex;
+            list-style: none;
+            
+            li {
+              margin-right: 30px;
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
